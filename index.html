@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>高铁贵宾厅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f0e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* iPhone 17 模拟框架 */
+        .phone-frame {
+            width: 1080px;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 顶部Logo区域 */
+        .header {
+            width: 100%;
+            height: 100%px;
+        }
+
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 内容区域 */
+        .content {
+            padding: 28px 24px 32px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .box {
+            width: 100%;
+            border-radius: 5%;
+            padding: 20px 0;
+            background-color: #fff;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+            margin-bottom: 20px;
+        }
+
+        /* 标题 */
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        /* 二维码 */
+        .qr-code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .qr-code img {
+            width: 90%;
+        }
+
+        /* 说明文字 */
+        .description {
+            font-size: 14px;
+            color: #555;
+            font-weight: 700;
+            line-height: 1.8;
+            text-align: left;
+            padding: 0 4px;
+        }
+
+        /* 底部按钮区域 */
+        .footer {
+            padding: 0 24px 28px;
+            flex-shrink: 0;
+        }
+
+        .back-btn {
+            width: 100%;
+            height: 48px;
+            background-color: #c5a065;
+            color: #fff;
+            font-size: 17px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #b89058;
+        }
+
+        .back-btn:active {
+            background-color: #a67f4a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone-frame">
+        <!-- 顶部Logo -->
+        <div class="header">
+            <img src="pblogo.png" alt="中国农业银行 壹私行">
+        </div>
+
+        <!-- 主要内容 -->
+        <div class="content">
+            <div class="box">
+                <!-- 标题 -->
+                <h1 class="title">杭州东站、西站</h1>
+
+                <!-- 二维码 -->
+                <div class="qr-code">
+                    <img src="code.png" alt="二维码">
+                </div>
+            </div>
+
+
+            <!-- 说明文字 -->
+            <p class="description">
+                本服务限本人使用，可携伴同行，次数将从您的权益总次数中扣除。使用时请向贵宾厅服务人员出示此二维码。
+            </p>
+        </div>
+
+        <!-- 返回按钮 -->
+        <div class="footer">
+            <button class="back-btn" onclick="history.back()">返回</button>
+        </div>
+    </div>
+</body>
+
+</html>
